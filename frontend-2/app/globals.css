@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-slate-850: #1e293b;
+  --color-slate-950: #020617;
+
+  /* Healthcare Palette - Professional & Minimalist */
+  --color-medical-50: #f8fafc;
+  --color-medical-100: #f1f5f9;
+  --color-medical-200: #e2e8f0;
+  --color-medical-300: #cbd5e1;
+  --color-medical-400: #94a3b8;
+  --color-medical-500: #64748b;
+  --color-medical-600: #475569;
+  --color-medical-700: #334155;
+  --color-medical-800: #1e293b;
+  --color-medical-900: #0f172a;
+
+  --color-brand-primary: #2563eb;
+  /* Trustworthy Blue */
+  --color-brand-secondary: #64748b;
+  --color-brand-accent: #0ea5e9;
+}
+
+@layer base {
+  body {
+    @apply antialiased text-slate-900 bg-white dark:bg-slate-950 dark:text-slate-100 text-lg;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  h1 {
+    @apply text-4xl font-extrabold tracking-tight;
+  }
+
+  h2 {
+    @apply text-3xl font-bold tracking-tight;
+  }
+
+  h3 {
+    @apply text-2xl font-bold;
+  }
+
+  p {
+    @apply leading-relaxed;
+  }
+}
+
+@layer utilities {
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-slate-200 dark:bg-slate-800 rounded-full;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    @apply bg-slate-300 dark:bg-slate-700;
+  }
+
+  .healthcare-card {
+    @apply bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-sm transition-all duration-200;
+  }
+
+  .healthcare-input {
+    @apply bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl px-5 py-3 text-lg focus:ring-2 focus:ring-brand-primary/20 focus:border-brand-primary outline-none transition-all;
+  }
+
+  .healthcare-button {
+    @apply px-6 py-3 bg-brand-primary hover:bg-brand-primary/90 text-white font-bold rounded-xl transition-all active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed text-lg;
+  }
+
+  .healthcare-button-outline {
+    @apply px-6 py-3 bg-transparent border-2 border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200 font-bold rounded-xl transition-all active:scale-[0.98] text-lg;
+  }
+}

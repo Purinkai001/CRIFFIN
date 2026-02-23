@@ -1,4 +1,4 @@
-# Path Detection VLM
+# CRIFFIN -- **C**ancer **R**ecognition and **I**nterpretation: **F**oundation-based **F**eature **I**dentificatio**N**
 Authors: Purin Denkawin, Wichinpong Sinchaisri, Nutchanon Yongsatianchot, Napat Angkathunyakul, Ronnachai Jaroensri
 ## Intro
 Siriraj Hospital's pathology department sees over 40,000 surgical cases annually. Our pathologists spend up to 30 hours per week reviewing cases on top of their teaching, research, and administrative responsibilities. Burnout is inevitable, and an urgent technological solution is needed.
